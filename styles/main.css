@@ -1,189 +1,46 @@
-/* CSS Custom Properties (Variables) & Fluid Design */
-:root {
-    --primary-color: #6366f1;
-    --primary-hover: #4f46e5;
-    --bg-color: #0f172a;
-    --surface-color: rgba(30, 41, 59, 0.7);
-    --text-color: #f8fafc;
-    --text-muted: #94a3b8;
-    --border-color: rgba(255, 255, 255, 0.1);
-    
-    --fs-hero: clamp(2rem, 4vw + 1rem, 3.5rem);
-    --fs-heading: clamp(1.5rem, 2vw + 1rem, 2.25rem);
-    --fs-body: clamp(0.95rem, 0.5vw + 0.8rem, 1.1rem);
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    line-height: 1.6;
-    font-size: var(--fs-body);
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Header Grid Layout */
-.site-header {
-    background: rgba(15, 23, 42, 0.9);
-    border-bottom: 1px solid var(--border-color);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    backdrop-filter: blur(10px);
-}
-
-.header-grid {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 0;
-}
-
-.logo {
-    font-size: 1.25rem;
-    font-weight: bold;
-}
-
-.logo span {
-    color: var(--primary-color);
-}
-
-.nav-links {
-    display: flex;
-    gap: 1.5rem;
-}
-
-.nav-links a {
-    color: var(--text-muted);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: var(--text-color);
-}
-
-/* Hero Section */
-.hero {
-    padding: 5rem 0;
-    text-align: center;
-}
-
-.hero-content h2 {
-    font-size: var(--fs-hero);
-    margin-bottom: 1rem;
-}
-
-.hero-content p {
-    color: var(--text-muted);
-    margin-bottom: 2rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Buttons */
-.btn {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    border-radius: 8px;
-    font-weight: 600;
-    text-decoration: none;
-    cursor: pointer;
-    border: none;
-}
-
-.primary-btn {
-    background-color: var(--primary-color);
-    color: white;
-}
-
-/* Section Title */
-.section-title {
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
-.section-title h3 {
-    font-size: var(--fs-heading);
-    margin-bottom: 0.5rem;
-}
-
-.section-title p {
-    color: var(--text-muted);
-}
-
-/* Advanced CSS Grid Showcase Layout */
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    padding-bottom: 5rem;
-}
-
-/* Glassmorphism Cards */
-.glass-card {
-    background: var(--surface-color);
-    border: 1px solid var(--border-color);
-    border-radius: 16px;
-    overflow: hidden; /* Important for image scale transition */
-    backdrop-filter: blur(12px);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-}
-
+/* Vivid Animated Flowing Gradient Color Blocks */
 .image-wrapper {
     overflow: hidden;
     width: 100%;
     height: 160px;
+    position: relative;
 }
 
 .card-image {
     height: 100%;
     width: 100%;
+    background-size: 300% 300%;
+    animation: vibrantFlow 4s ease infinite;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
 }
 
-.bg-1 { background: linear-gradient(135deg, #6366f1, #a855f7); }
-.bg-2 { background: linear-gradient(135deg, #3b82f6, #06b6d4); }
-.bg-3 { background: linear-gradient(135deg, #ec4899, #f43f5e); }
-
-.card-body {
-    padding: 1.5rem;
+/* High-contrast, vibrant shifting gradients */
+.bg-1 { 
+    background-image: linear-gradient(120deg, #ff3366, #ff9900, #33ccff, #ff3366); 
+}
+.bg-2 { 
+    background-image: linear-gradient(120deg, #7928ca, #ff0080, #ff4d4d, #7928ca); 
+}
+.bg-3 { 
+    background-image: linear-gradient(120deg, #0070f3, #00dfd8, #7928ca, #0070f3); 
 }
 
-.card-body h4 {
-    font-size: 1.25rem;
-    margin-bottom: 0.75rem;
+/* Fast and noticeable background shift animation */
+@keyframes vibrantFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
-.card-body p {
-    color: var(--text-muted);
-    margin-bottom: 1.5rem;
-    font-size: 0.95rem;
-}
-
-.card-btn {
-    background: transparent;
-    color: var(--primary-color);
-    border: 1px solid var(--primary-color);
-    width: 100%;
-}
-
-/* Footer */
-.site-footer {
-    border-top: 1px solid var(--border-color);
-    padding: 2rem 0;
-    text-align: center;
-    color: var(--text-muted);
-    font-size: 0.9rem;
+/* Dramatic hover effect: zooms and boosts color saturation */
+.glass-card:hover .card-image {
+    transform: scale(1.12);
+    filter: brightness(1.2) saturate(1.3);
+    animation-duration: 2s; /* Speeds up when hovered! */
 }
