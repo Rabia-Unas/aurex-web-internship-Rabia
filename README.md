@@ -1,22 +1,15 @@
-# Aurex Web Internship - Week 1 & Week 2
+# AUREX Full-Stack Engineering Internship - Week 3
 
-## Intern Overview
-- **Name:** Rabia Unas
-- **Domain:** Full-Stack Web Development
-- **Week:** Week 1 & Week 2
-- **Live Deployment Link:** https://Rabia-Unas.github.io/aurex-web-internship-Rabia/
+* **Intern's Full Name:**Rabia Younas
+* **Domain:** Frontend Foundation
+* **Week Number:** Week 3
 
-## Project Overview
-This repository contains a responsive personal portfolio webpage built for the Aurex Web Development Internship:
-- **Week 1:** Structured using semantic HTML5 elements (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<form>`, `<footer>`).
-- **Week 2:** Styled with modern CSS3 using Flexbox navigation, a responsive CSS Grid layout, custom property variables, and media queries for desktop, tablet, and mobile displays.
+## Live Deployment Link
+* [Insert GitHub Pages or Vercel URL Here]
 
-## Technologies Used
-- HTML5 (Semantic Structure)
-- CSS3 (Flexbox, CSS Grid, Media Queries, CSS Variables)
-- Git & GitHub (Version Control & GitHub Pages Deployment)
-
-## How to Run the Project Locally
-1. Clone the repository:
-   ```bash
-   git clone [https://github.com/Rabia-Unas/aurex-web-internship-Rabia.git](https://github.com/Rabia-Unas/aurex-web-internship-Rabia.git)
+## Overview of Implementation
+* **Advanced CSS Grid Layouts:** Developed a completely responsive multi-column layout using `grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))` combined with Flexbox elements.
+* **Keyframe Animations & Transitions:** Built smooth scroll/load animations (`fadeIn`, `slideUp`) alongside interactive card elevation and hover state micro-interactions.
+* **Modern UI Polish:** Implemented custom CSS variables (`:root`), glassmorphism effects (`backdrop-filter`), and fluid typography via CSS `clamp()`.
+* **Responsive Optimization:** Verified layout consistency and fluid scaling across mobile, tablet, and desktop screens with zero horizontal overflow.
+*

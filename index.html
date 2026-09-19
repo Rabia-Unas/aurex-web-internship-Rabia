@@ -1,93 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personal Profile & Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUREX Week 3 Showcase - Modern Web Application</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/animations.css">
 </head>
 <body>
 
-  <!-- Header Section -->
-  <header>
-    <h1>Rabia Younas</h1>
-    <p>Full-Stack Web Development Intern</p>
-    <nav>
-      <ul>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <!-- About Me Section -->
-    <section id="about">
-      <h2>About Me</h2>
-      <img src="https://via.placeholder.com/150" alt="Profile picture">
-      <p>
-        Hello! I am a passionate web development intern eager to build responsive, accessible, and user-friendly web applications.
-      </p>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills">
-      <h2>Skills</h2>
-      <ul>
-        <li>HTML5 & Semantic Markup</li>
-        <li>CSS3 (Flexbox & Grid)</li>
-        <li>Git & GitHub Version Control</li>
-        <li>JavaScript (Basic)</li>
-      </ul>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education">
-      <h2>Education</h2>
-      <article>
-        <h3>Bachelor of Science in Information Technology</h3>
-        <p>PU affiliated college | 2023 - Present</p>
-      </article>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience">
-      <h2>Experience</h2>
-      <article>
-        <h3>Web Development Intern</h3>
-        <p>Aurex Web Internship | Week 1 - Week 2</p>
-        <p>Built semantic HTML profiles and styled responsive layouts using CSS Flexbox and Grid.</p>
-      </article>
-    </section>
-
-    <!-- Contact Form Section -->
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <form action="#" method="POST">
-        <div>
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required>
+    <!-- Header Section -->
+    <header class="site-header">
+        <div class="container header-grid">
+            <h1 class="logo">AUREX <span>Intern</span></h1>
+            <nav class="nav-links">
+                <a href="#about">About</a>
+                <a href="#projects">Showcase</a>
+                <a href="#contact">Contact</a>
+            </nav>
         </div>
-        <div>
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        <div>
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" rows="4" required></textarea>
-        </div>
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
-  </main>
+    </header>
 
-  <!-- Footer Section -->
-  <footer>
-    <p>&copy; 2026 Jane Doe. All rights reserved.</p>
-  </footer>
+    <!-- Hero Section with Fluid Typography -->
+    <section class="hero">
+        <div class="container hero-content animate-fade-in">
+            <h2>Mastering Advanced CSS Grid & Animations</h2>
+            <p>Building responsive, fluid, and interactive UI micro-interactions with clean architecture.</p>
+            <a href="#projects" class="btn primary-btn">Explore Projects</a>
+        </div>
+    </section>
+
+    <!-- Main Content: Advanced CSS Grid Showcase -->
+    <main class="container main-content">
+        <section id="projects" class="section-title">
+            <h3>Interactive Project Showcase</h3>
+            <p>Responsive multi-column gallery utilizing <code>auto-fit</code> and <code>minmax</code>.</p>
+        </section>
+
+        <!-- Grid Container -->
+        <div class="project-grid">
+            <!-- Card 1 -->
+            <article class="card glass-card animate-slide-up">
+                <div class="card-image bg-1"></div>
+                <div class="card-body">
+                    <h4>Glassmorphism UI</h4>
+                    <p>Modern card design featuring background blur, custom CSS variables, and clean layout structure.</p>
+                    <button class="btn card-btn">View Details</button>
+                </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="card glass-card animate-slide-up">
+                <div class="card-image bg-2"></div>
+                <div class="card-body">
+                    <h4>Keyframe Animations</h4>
+                    <p>Smooth hover effects, transform properties, and micro-interactions powered by pure CSS.</p>
+                    <button class="btn card-btn">View Details</button>
+                </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="card glass-card animate-slide-up">
+                <div class="card-image bg-3"></div>
+                <div class="card-body">
+                    <h4>Fluid Typography</h4>
+                    <p>Responsive sizing scaling smoothly across device breakpoints using modern clamp functions.</p>
+                    <button class="btn card-btn">View Details</button>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 AUREX Full-Stack Engineering Internship. Week 3 Task Completed.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
