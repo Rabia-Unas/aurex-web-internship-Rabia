@@ -5,7 +5,7 @@
 * **Week Number:** Week 3
 
 ## Live Deployment Link
-* [Insert GitHub Pages or Vercel URL Here]
+*  https://rabia-unas.github.io/aurex-web-internship-Rabia/
 
 ## Overview of Implementation
 * **Advanced CSS Grid Layouts:** Developed a completely responsive multi-column layout using `grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))` combined with Flexbox elements.
