@@ -1,4 +1,4 @@
-/* CSS Animations & Keyframe Micro-interactions */
+/* Enhanced CSS Animations & Micro-interactions */
 
 @keyframes fadeIn {
     from {
@@ -22,17 +22,76 @@
     }
 }
 
+@keyframes pulseGlow {
+    0% {
+        box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(99, 102, 241, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(99, 102, 241, 0);
+    }
+}
+
 .animate-fade-in {
-    animation: fadeIn 1s ease-out forwards;
+    animation: fadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .animate-slide-up {
-    animation: slideUp 0.8s ease-out forwards;
+    animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-/* Card Hover Elevation Effect */
+/* Highly Interactive Card Hover & Transition State */
+.glass-card {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+                box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+                border-color 0.4s ease;
+    will-change: transform;
+}
+
 .glass-card:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 12px 40px 0 rgba(99, 102, 241, 0.25);
-    border-color: rgba(99, 102, 241, 0.4);
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 20px 40px -15px rgba(99, 102, 241, 0.3);
+    border-color: rgba(99, 102, 241, 0.6);
+}
+
+/* Image zoom transition inside the card on hover */
+.glass-card .card-image {
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover .card-image {
+    transform: scale(1.08);
+}
+
+/* Button Interactive Micro-interactions */
+.btn {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.primary-btn:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-3px);
+    animation: pulseGlow 1.5s infinite;
+}
+
+.primary-btn:active {
+    transform: translateY(-1px);
+}
+
+.card-btn {
+    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.card-btn:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: scale(1.02);
+}
+
+.card-btn:active {
+    transform: scale(0.98);
 }
