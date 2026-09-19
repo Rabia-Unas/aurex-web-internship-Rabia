@@ -3,79 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AUREX Week 3 Showcase - Modern Web Application</title>
-    <link rel="stylesheet" href="./styles/main.css">
-    <link rel="stylesheet" href="./styles/animations.css">
+    <title>AUREX Full-Stack Internship | Week 3</title>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/animations.css">
 </head>
 <body>
 
-    <!-- Header Section -->
-    <header class="site-header">
-        <div class="container header-grid">
-            <h1 class="logo">AUREX <span>Intern</span></h1>
-            <nav class="nav-links">
-                <a href="#about">About</a>
-                <a href="#projects">Showcase</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </div>
+    <header class="hero-header animate-fade-in">
+        <h1>AUREX Interactive Showcase</h1>
+        <p>Building responsive, fluid, and interactive UI micro-interactions with clean architecture.</p>
     </header>
 
-    <!-- Hero Section with Fluid Typography -->
-    <section class="hero">
-        <div class="container hero-content animate-fade-in">
-            <h2>Mastering Advanced CSS Grid & Animations</h2>
-            <p>Building responsive, fluid, and interactive UI micro-interactions with clean architecture.</p>
-            <a href="#projects" class="btn primary-btn">Explore Projects</a>
-        </div>
-    </section>
-
-    <!-- Main Content: Advanced CSS Grid Showcase -->
-    <main class="container main-content">
-        <section id="projects" class="section-title">
-            <h3>Interactive Project Showcase</h3>
-            <p>Responsive multi-column gallery utilizing <code>auto-fit</code> and <code>minmax</code>.</p>
+    <main class="container">
+        <!-- Card 1 -->
+        <section class="glass-card animate-slide-up">
+            <div class="image-wrapper">
+                <div class="card-image bg-1"></div>
+            </div>
+            <h2>CSS Grid & Layout</h2>
+            <p>Responsive multi-column gallery utilizing auto-fit and minmax.</p>
+            <button class="btn">View Details</button>
         </section>
 
-        <!-- Grid Container -->
-        <div class="project-grid">
-            <!-- Card 1 -->
-            <article class="card glass-card animate-slide-up">
-                <div class="card-image bg-1"></div>
-                <div class="card-body">
-                    <h4>Glassmorphism UI</h4>
-                    <p>Modern card design featuring background blur, custom CSS variables, and clean layout structure.</p>
-                    <button class="btn card-btn">View Details</button>
-                </div>
-            </article>
-
-            <!-- Card 2 -->
-            <article class="card glass-card animate-slide-up">
+        <!-- Card 2 -->
+        <section class="glass-card animate-slide-up" style="animation-delay: 0.2s;">
+            <div class="image-wrapper">
                 <div class="card-image bg-2"></div>
-                <div class="card-body">
-                    <h4>Keyframe Animations</h4>
-                    <p>Smooth hover effects, transform properties, and micro-interactions powered by pure CSS.</p>
-                    <button class="btn card-btn">View Details</button>
-                </div>
-            </article>
+            </div>
+            <h2>Glassmorphism UI</h2>
+            <p>Modern card design featuring background blur, custom CSS variables, and clean layout structure.</p>
+            <button class="btn">View Details</button>
+        </section>
 
-            <!-- Card 3 -->
-            <article class="card glass-card animate-slide-up">
+        <!-- Card 3 -->
+        <section class="glass-card animate-slide-up" style="animation-delay: 0.4s;">
+            <div class="image-wrapper">
                 <div class="card-image bg-3"></div>
-                <div class="card-body">
-                    <h4>Fluid Typography</h4>
-                    <p>Responsive sizing scaling smoothly across device breakpoints using modern clamp functions.</p>
-                    <button class="btn card-btn">View Details</button>
-                </div>
-            </article>
-        </div>
+            </div>
+            <h2>Keyframe Animations</h2>
+            <p>Smooth hover effects, transform properties, and micro-interactions powered by pure CSS.</p>
+            <button class="btn">View Details</button>
+        </section>
     </main>
 
-    <!-- Footer -->
     <footer class="site-footer">
-        <div class="container">
-            <p>&copy; 2026 AUREX Full-Stack Engineering Internship. Week 3 Task Completed.</p>
-        </div>
+        <p>&copy; 2026 AUREX Full-Stack Engineering Internship. Week 3 Task Completed.</p>
     </footer>
 
 </body>

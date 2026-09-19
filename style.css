@@ -1,0 +1,73 @@
+/* --- BASE & VARIABLES --- */
+:root {
+    --bg-color: #0f172a;
+    --card-bg: rgba(30, 41, 59, 0.7);
+    --text-color: #f8fafc;
+    --text-muted: #94a3b8;
+    --accent: #6366f1;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: system-ui, -apple-system, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+/* --- GRID LAYOUT --- */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- GLASS CARDS --- */
+.glass-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 20px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.35);
+    border-color: rgba(99, 102, 241, 0.6);
+}
+
+/* --- ANIMATED GRADIENT BLOCKS --- */
+.image-wrapper {
+    overflow: hidden;
+    width: 100%;
+    height: 160px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.card-image {
+    height: 100%;
+    width: 100%;
+    background-size: 300% 300%;
+    animation: vibrantFlow 4s ease infinite;
+    transition: transform 0.5s ease, filter 0.3s ease;
+}
+
+.bg-1 { background-image: linear-gradient(120deg, #ff3366, #ff9900, #33ccff, #ff3366); }
+.bg-2 { background-image: linear-gradient(120deg, #7928ca, #ff0080, #ff4d4d, #7928ca); }
+.bg-3 { background-image: linear-gradient(120deg, #0070f3, #00dfd8, #7928ca, #0070f3); }
+
+@keyframes vibrantFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.glass-card:hover .card-image {
+    transform: scale(1.1);
+    filter: brightness(1.2) saturate(1.3);
+}
