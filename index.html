@@ -1,55 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AUREX Full-Stack Internship | Week 3</title>
-    <!-- Stylesheets -->
+    <title>Task Management Application</title>
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/animations.css">
+    <script src="scripts/main.js"></script>
 </head>
+
 <body>
+    <div class="container">
+        <h1>Task Manager</h1>
 
-    <header class="hero-header animate-fade-in">
-        <h1>AUREX Interactive Showcase</h1>
-        <p>Building responsive, fluid, and interactive UI micro-interactions with clean architecture.</p>
-    </header>
-
-    <main class="container">
-        <!-- Card 1 -->
-        <section class="glass-card animate-slide-up">
-            <div class="image-wrapper">
-                <div class="card-image bg-1"></div>
+        <!-- Task Form -->
+        <form id="task-form">
+            <input type="hidden" id="task-id">
+            <div class="form-group">
+                <input type="text" id="task-title" placeholder="Task Title..." required>
             </div>
-            <h2>CSS Grid & Layout</h2>
-            <p>Responsive multi-column gallery utilizing auto-fit and minmax.</p>
-            <button class="btn">View Details</button>
-        </section>
-
-        <!-- Card 2 -->
-        <section class="glass-card animate-slide-up" style="animation-delay: 0.2s;">
-            <div class="image-wrapper">
-                <div class="card-image bg-2"></div>
+            <div class="form-group">
+                <select id="task-priority">
+                    <option value="Low">Low</option>
+                    <option value="Medium" selected>Medium</option>
+                    <option value="High">High</option>
+                </select>
             </div>
-            <h2>Glassmorphism UI</h2>
-            <p>Modern card design featuring background blur, custom CSS variables, and clean layout structure.</p>
-            <button class="btn">View Details</button>
-        </section>
+            <button type="submit" id="submit-btn">Add Task</button>
+        </form>
 
-        <!-- Card 3 -->
-        <section class="glass-card animate-slide-up" style="animation-delay: 0.4s;">
-            <div class="image-wrapper">
-                <div class="card-image bg-3"></div>
+        <!-- Filters & Search -->
+        <div class="controls">
+            <input type="text" id="search-input" placeholder="Search tasks...">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="active">Active</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
             </div>
-            <h2>Keyframe Animations</h2>
-            <p>Smooth hover effects, transform properties, and micro-interactions powered by pure CSS.</p>
-            <button class="btn">View Details</button>
-        </section>
-    </main>
+        </div>
 
-    <footer class="site-footer">
-        <p>&copy; 2026 AUREX Full-Stack Engineering Internship. Week 3 Task Completed.</p>
-    </footer>
 
+        <!-- Task List -->
+        <ul id="task-list"></ul>
+    </div>
+
+    <script src="scripts/main.js"></script>
 </body>
+
 </html>

@@ -1,15 +1,24 @@
-# AUREX Full-Stack Engineering Internship - Week 3
+# AUREX Full-Stack Engineering Internship
+## Month 1: Frontend Foundation — Week 4 Task
 
-* **Intern's Full Name:**Rabia Younas
-* **Domain:** Frontend Foundation
-* **Week Number:** Week 3
+### Intern Information
+* **Name:** Rabia Younas
+* **Domain:** Frontend Foundation / Full-Stack Engineering
 
-## Live Deployment Link
-*  https://rabia-unas.github.io/aurex-web-internship-Rabia/
+### Project Overview
+A fully responsive, client-side **Task Management Application** built using pure HTML5, CSS3, and Vanilla JavaScript with data persistence via `localStorage`[span_1](start_span)[span_1](end_span).
 
-## Overview of Implementation
-* **Advanced CSS Grid Layouts:** Developed a completely responsive multi-column layout using `grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))` combined with Flexbox elements.
-* **Keyframe Animations & Transitions:** Built smooth scroll/load animations (`fadeIn`, `slideUp`) alongside interactive card elevation and hover state micro-interactions.
-* **Modern UI Polish:** Implemented custom CSS variables (`:root`), glassmorphism effects (`backdrop-filter`), and fluid typography via CSS `clamp()`.
-* **Responsive Optimization:** Verified layout consistency and fluid scaling across mobile, tablet, and desktop screens with zero horizontal overflow.
+### Live Deployment Link
+* 
+
+### Features Implemented
+* Add, edit, and delete tasks dynamically.
+* Mark tasks as complete/incomplete.
+* Basic filtering (All, Active, Completed) and real-time search capabilities.
+* Persistent state management using browser `localStorage`[span_2](start_span)[span_2](end_span).
+* Fully responsive user interface across devices.
+
+### Challenges Faced & What Was Learned
+* **Challenge:** Managing dynamic updating and editing flows cleanly using Vanilla JavaScript DOM manipulation without a framework.
+* **Learning Gained:** Deepened understanding of event delegation, handling state models directly via arrays, and synchronizing user actions with browser `localStorage`.
 *
